@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DashboardLayout } from "@/components/DashboardLayout";
+import { DashboardHeader } from "@/components/DashboardHeader";
 import { MetricCard } from "@/components/MetricCard";
 import { StatisticsChart } from "@/components/StatisticsChart";
 import { RecentOrders } from "@/components/RecentOrders";
@@ -17,24 +18,19 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 const Index = () => {
   return (
     <DashboardLayout>
-      <div className="p-6 space-y-6">
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-foreground">Admin Dashboard</h1>
-            <p className="text-muted-foreground mt-2 max-w-2xl">
-              This is the admin dashboard of the marketplace, allowing admin user(s) to monitor, manage, and control all key aspects of the platform.
-            </p>
-          </div>
-        </div>
-
-        {/* Info Banner */}
-        <div className="bg-accent border border-accent-foreground/20 rounded-lg p-4 flex items-center space-x-3">
+      <DashboardHeader
+        title="Admin Dashboard"
+        description="This is the admin dashboard of the marketplace, allowing admin user(s) to monitor, manage, and control all key aspects of the platform."
+      >
+        <div className="bg-accent border border-accent-foreground/20 rounded-lg p-4 flex items-center space-x-3 mx-6 mb-6">
           <Lightbulb className="text-accent-foreground h-5 w-5" />
           <p className="text-sm text-accent-foreground">
             View key metrics like sales, orders, traffic sources, and customer activity at a glance. Use filters to track performance over time.
           </p>
         </div>
+      </DashboardHeader>
+      
+      <div className="p-6 space-y-6">
 
         {/* Statistics Chart */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
