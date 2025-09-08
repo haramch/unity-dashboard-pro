@@ -90,11 +90,8 @@ const Index = () => {
       
       {/* Book a Demo Button */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">
-        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-8 text-sm font-medium tracking-wider transform -rotate-90 origin-center whitespace-nowrap transition-colors rounded-l-lg shadow-lg">
-          <div className="flex items-center space-x-2">
-            <Calendar className="h-4 w-4" />
-            <span>BOOK A DEMO</span>
-          </div>
+        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-3 py-6 text-sm font-medium tracking-wider transform -rotate-90 origin-center whitespace-nowrap transition-colors rounded-none shadow-lg">
+          <span>BOOK A DEMO</span>
         </button>
       </div>
     </DashboardLayout>
