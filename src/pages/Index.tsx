@@ -11,7 +11,8 @@ import {
   Users, 
   Store,
   TrendingUp,
-  Lightbulb
+  Lightbulb,
+  Calendar
 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
@@ -85,6 +86,16 @@ const Index = () => {
           <RecentOrders />
           <TrafficChart />
         </div>
+      </div>
+      
+      {/* Book a Demo Button */}
+      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">
+        <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-8 text-sm font-medium tracking-wider transform -rotate-90 origin-center whitespace-nowrap transition-colors rounded-l-lg shadow-lg">
+          <div className="flex items-center space-x-2">
+            <Calendar className="h-4 w-4" />
+            <span>BOOK A DEMO</span>
+          </div>
+        </button>
       </div>
     </DashboardLayout>
   );
