@@ -14,10 +14,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <AdminSidebar isCollapsed={sidebarCollapsed} onToggle={toggleSidebar} />
       <main className={cn(
-        "flex-1 transition-all duration-300 ease-in-out overflow-auto",
+        "transition-all duration-300 ease-in-out overflow-auto min-h-screen",
         sidebarCollapsed ? "ml-16" : "ml-64"
       )}>
         {children}

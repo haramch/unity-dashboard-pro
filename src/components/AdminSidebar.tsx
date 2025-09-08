@@ -42,7 +42,7 @@ interface AdminSidebarProps {
 export function AdminSidebar({ isCollapsed, onToggle }: AdminSidebarProps) {
   return (
     <div className={cn(
-      "bg-sidebar text-sidebar-foreground h-screen transition-all duration-300 ease-in-out flex flex-col",
+      "bg-sidebar text-sidebar-foreground transition-all duration-300 ease-in-out flex flex-col fixed left-0 top-0 h-screen z-50",
       isCollapsed ? "w-16" : "w-64"
     )}>
       {/* Header */}
